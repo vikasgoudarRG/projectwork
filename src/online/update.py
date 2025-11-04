@@ -9,6 +9,7 @@ import torch.optim as optim
 from tqdm import tqdm
 
 from src.utils.seed import set_seed
+from src.utils.device import get_device
 from src.data.dataset_loader import (
     load_event_traces, split_by_blockid, make_key_windows, KeyDataset
 )
@@ -28,8 +29,7 @@ def online_finetune(false_positive_blockids=None, epochs=2, lr=1e-4, batch_size=
     """
     # Setup
     set_seed(1337)
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Using device: {device}")
+    device = get_device(prefer_mps=True, verbose=True)
     
     # Create output directories
     os.makedirs('artifacts/online', exist_ok=True)

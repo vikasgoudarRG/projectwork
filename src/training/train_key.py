@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 from src.utils.seed import set_seed
+from src.utils.device import get_device
 from src.data.dataset_loader import (
     load_event_traces, split_by_blockid, build_key_dataloaders, get_vocab_size
 )
@@ -23,8 +24,7 @@ def train_key_model(data_path='Event_traces.csv', h=10, batch_size=128, epochs=2
     """Train Key LSTM model."""
     # Setup
     set_seed(1337)
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Using device: {device}")
+    device = get_device(prefer_mps=True, verbose=True)
     
     # Create output directories
     os.makedirs('models', exist_ok=True)

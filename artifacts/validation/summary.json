@@ -1,0 +1,43 @@
+{
+  "raw_blockid_summary": {
+    "total_lines": 10000,
+    "total_blockid_occurrences": 10000,
+    "unique_blockids_raw": 1018,
+    "malformed_ratio": 0.0
+  },
+  "sequence_stats": {
+    "count_sessions": 575061,
+    "len_min": 2,
+    "len_max": 298,
+    "len_mean": 19.433814847468355,
+    "len_median": 19.0,
+    "pct_lt3": 0.5129890568131034,
+    "pct_gt200": 0.0076513622033140835
+  },
+  "label_ratio": {
+    "anomalies_pct": 2.9280371995318757,
+    "normals_pct": 97.07196280046813,
+    "total_labels": 575061
+  },
+  "vocab_summary": {
+    "vocab_size": 29,
+    "min_id": 1,
+    "max_id": 29,
+    "dense_or_sparse": "dense",
+    "problems": []
+  },
+  "window_readiness": {
+    "total_windows_expected": 0,
+    "window_file_found": false,
+    "total_windows_found": 0,
+    "tolerance_ok": true
+  },
+  "split_integrity": {
+    "disjoint_by_blockid": true,
+    "counts": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    }
+  }
+}

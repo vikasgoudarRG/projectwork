@@ -1,0 +1,7 @@
+{
+  "vocab_size": 29,
+  "min_id": 1,
+  "max_id": 29,
+  "dense_or_sparse": "dense",
+  "problems": []
+}
